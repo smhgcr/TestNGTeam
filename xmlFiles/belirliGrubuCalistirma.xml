@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Istenen grubu calistirma" verbose="3">
+
+    <test name="Istenen grubu calistirma">
+        <!-- Istenen bir grubu çalıştırmak için
+             öncelikle o gruptaki test methodlarını işaretlenmiş olması gerekir
+
+
+             Çalıştırmaya gelindiğinde
+             iki şeyi belirtmemiz gerekir
+             1- Çalışacak test methodları nerede?
+             2- Çalışacak grup ismi ne?
+
+             Bu iki bilgiyi vermek için 2 hiyerarşı oluşturmamız gerekir
+
+             Bir methoda birden fazla grup ismi verilebilir.
+
+             suite satırına eklenebilecek verbose = deger
+             konsolda yazdırılacak hataların ayrıntı miktarını belirler
+             1 en az ayrıntı,
+             10 en çok ayrıntı
+
+         -->
+        <groups>
+            <run>
+                <include name="minireg1"></include>
+                <exclude name="minireg2"></exclude>
+            </run>
+        </groups>
+        <packages>
+            <package name="tests.day14_testNGFramework"></package>
+            <package name="tests.day15_SoftAssert"></package>
+        </packages>
+
+    </test>
+</suite>
